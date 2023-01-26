@@ -1,5 +1,5 @@
 const nodemailer = require('nodemailer')
-exports.handler = async () => {
+exports.handler = async (data) => {
 let transporter = nodemailer.createTransport({
       host: ",
       port: 25,
@@ -12,10 +12,9 @@ let transporter = nodemailer.createTransport({
     let info = await transporter.sendMail({
     
       from: "no-reply",
-
-      to: to,
- 
-      subject: subject,
+      to: data.to,
+      subject: data.subject,
+      text:data.text
  
       `,
     });
