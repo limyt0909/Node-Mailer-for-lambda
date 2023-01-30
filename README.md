@@ -1,2 +1,2 @@
 # NodeMailer-for-lambda
-AWS Lambda Gateway - 1.0
+AWS Lambda Gateway - 1.1
